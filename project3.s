@@ -54,3 +54,7 @@ L1: li $t4, '0'
     add $s4, $s4, $s3
     jr $ra
 
+L2: li $t4, 'a'
+    li $t5, 's'
+    blt $t0, $t4, L3 #test the next condition if this falls through
+    bgt $t0, $t5, L3 #move to L3 if this isn't true
