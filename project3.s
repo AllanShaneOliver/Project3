@@ -66,3 +66,6 @@ L3: li $t4, 'A'
     li $t5, 'S'
     blt $t0, $t4, L4 #test the next condition if this falls through
     bgt $t0, $t5, L4 #move to ELSE if this isn't true
+    addi $s3, $t0, -55 #subtract 55, place result into $s3
+    add $s4, $s4, $s3
+    jr $ra
