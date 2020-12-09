@@ -17,3 +17,10 @@ jal SubA
 exit:
   li $v0, 10
   syscall
+
+SubA:
+
+  move $s2, $ra
+  jal SubB
+  move $ra, $s2
+  jr $ra
