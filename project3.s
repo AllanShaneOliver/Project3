@@ -24,3 +24,10 @@ SubA:
   jal SubB
   move $ra, $s2
   jr $ra
+
+SubB:
+
+move $s0, $ra #1
+begin:
+  li $t2, 0 #$i=0;
+  li $s5, 6 #exit condition - exit loop if at 10th character
