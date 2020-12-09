@@ -50,3 +50,7 @@ L1: li $t4, '0'
     li $t5, '9'
     blt $t0, $t4, L2 #test the next condition if this falls through
     bgt $t0, $t5, L2 #move to L2 if this isn't true
+    addi $s3, $t0, -48 #subtract 48, place result into $s3
+    add $s4, $s4, $s3
+    jr $ra
+
