@@ -61,3 +61,8 @@ L2: li $t4, 'a'
     addi $s3, $t0, -87 #subtract 87, place result into $s3
     add $s4, $s4, $s3
     jr $ra
+
+L3: li $t4, 'A'
+    li $t5, 'S'
+    blt $t0, $t4, L4 #test the next condition if this falls through
+    bgt $t0, $t5, L4 #move to ELSE if this isn't true
