@@ -43,3 +43,10 @@ loop:
 exitB:
   move $ra, $s0 #2
   jr $ra
+
+SubC:
+
+L1: li $t4, '0'
+    li $t5, '9'
+    blt $t0, $t4, L2 #test the next condition if this falls through
+    bgt $t0, $t5, L2 #move to L2 if this isn't true
