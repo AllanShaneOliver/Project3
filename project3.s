@@ -11,3 +11,9 @@ main:
   la $a0, list
   li $a1, 5 #input no more than 10 characters
   syscall
+
+jal SubA
+
+exit:
+  li $v0, 10
+  syscall
