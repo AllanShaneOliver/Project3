@@ -84,3 +84,6 @@ afterloop:
   move $a0, $s4
   syscall
 
+end:
+  li $v0, 10
+  syscall
