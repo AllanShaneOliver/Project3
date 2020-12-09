@@ -73,3 +73,9 @@ L3: li $t4, 'A'
 L4: li $t4, 's'
     bgt $t0, $t4, EL
     j afterloop
+
+EL: li $v0, 4
+    la $a0, invalid
+    syscall
+    jr $ra
+
