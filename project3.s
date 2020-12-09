@@ -79,3 +79,8 @@ EL: li $v0, 4
     syscall
     jr $ra
 
+afterloop:
+  li $v0, 1
+  move $a0, $s4
+  syscall
+
