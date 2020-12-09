@@ -31,3 +31,10 @@ move $s0, $ra #1
 begin:
   li $t2, 0 #$i=0;
   li $s5, 6 #exit condition - exit loop if at 10th character
+
+loop:
+    lb $t0, ($a0) #loads byte of user input into $t0
+    addi $t2, $t2, 1 #add 1 after each iteration, i++;
+    beq $s5, $t2, exitB #jump to afterloop after 10th character is reached
+    addi $a0, $a0, 1
+    jal SubC
