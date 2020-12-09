@@ -38,3 +38,8 @@ loop:
     beq $s5, $t2, exitB #jump to afterloop after 10th character is reached
     addi $a0, $a0, 1
     jal SubC
+    j loop
+
+exitB:
+  move $ra, $s0 #2
+  jr $ra
